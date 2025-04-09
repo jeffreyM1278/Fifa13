@@ -1,0 +1,136 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+
+//HOME-LOGIN-REGISTER
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff6e6;
+    color: #333;
+}
+
+.main-container {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.titulo-principal {
+    font-size: 2.8rem;
+    color: #d35400;
+    margin-bottom: 20px;
+}
+
+.texto-bienvenida {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.botones-home {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-home {
+    padding: 12px 28px;
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.iniciar {
+    background-color: #27ae60;
+}
+
+    .iniciar:hover {
+        background-color: #219150;
+    }
+
+.registrar {
+    background-color: #e67e22;
+}
+
+    .registrar:hover {
+        background-color: #d0660f;
+    }
+
+.form-container {
+    max-width: 450px;
+    margin: 80px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-title {
+    text-align: center;
+    color: #c0392b;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fffefb;
+}
+
+    .input-field:focus {
+        border-color: #f39c12;
+        outline: none;
+    }
+
+.btn-form {
+    margin-top: 25px;
+    width: 100%;
+    padding: 12px;
+    background-color: #d35400;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-form:hover {
+        background-color: #b84300;
+    }

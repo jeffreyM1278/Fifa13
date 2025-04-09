@@ -1,0 +1,48 @@
+﻿@model PrototipoRestaurante3.Models.Cliente
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Registrarse";
+}
+
+<div class="form-container">
+    <h2 class="form-title">Registro de Cliente</h2>
+
+    <form asp-action="Register" method="post">
+        <div class="form-group">
+            <label>Nombre</label>
+            <input asp-for="Nombre" class="input-field" placeholder="Ingrese su nombre" />
+        </div>
+
+        <div class="form-group">
+            <label>Apellido</label>
+            <input asp-for="Apellido" class="input-field" placeholder="Ingrese su apellido" />
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input asp-for="Email" class="input-field" placeholder="ejemplo@correo.com" />
+        </div>
+
+        <div class="form-group">
+            <label>Teléfono</label>
+            <input asp-for="Telefono" class="input-field" placeholder="Número de teléfono" />
+        </div>
+
+        <div class="form-group">
+            <label>Dirección</label>
+            <input asp-for="Direccion" class="input-field" placeholder="Dirección completa" />
+        </div>
+
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input asp-for="Contrasena" type="password" class="input-field" placeholder="Crea una contraseña" />
+        </div>
+
+        <button type="submit" class="btn-form">Registrarse</button>
+    </form>
+
+    <p class="link-text">¿Ya tienes cuenta? <a href="/Account/Login">Inicia sesión aquí</a></p>
+</div>

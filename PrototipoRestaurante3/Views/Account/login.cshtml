@@ -1,0 +1,20 @@
+﻿@model PrototipoRestaurante3.Models.Cliente
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Iniciar Sesión";
+}
+    
+<div class="form-container">
+    <h2 class="form-title">Iniciar Sesión</h2>
+    <form asp-action="Login" method="post">
+        <label>Email</label>
+        <input asp-for="Email" type="email" class="input-field" placeholder="Ingrese su correo" />
+
+        <label>Contraseña</label>
+        <input asp-for="Contrasena" type="password" class="input-field" placeholder="Ingrese su contraseña" />
+
+        <button type="submit" class="btn-form">Entrar</button>
+    </form>
+</div>
