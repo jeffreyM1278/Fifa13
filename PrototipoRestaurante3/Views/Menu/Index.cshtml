@@ -8,6 +8,20 @@
 
 @{
 
+
+    <!-- Botón de Login centrado arriba -->
+    <div class="login-button">
+        <a href="@Url.Action("Index", "Home")" class="icon-button" title="Iniciar Sesión">👤</a>
+    </div>
+
+    <!-- Botón de Carrito fijo abajo a la derecha -->
+    <div class="carrito-button">
+        <a href="@Url.Action("Index", "Carrito")" class="icon-button" title="Carrito de Compras">🛒</a>
+    </div>
+
+
+
+
     <div class="container">
 
         <!-- Promociones -->
@@ -18,7 +32,7 @@
                 <div class="card">
                     <div class="card-content">
                         <h3>@promocion.Descripcion</h3>
-                        <p><strong>Descuento:</strong> @(promocion.Descuento * 100)% OFF</p>
+                        <p><strong>Descuento:</strong> @(promocion.Descuento * 100)% </p>
                         <p><small>Válido desde: @promocion.FechaInicio.ToShortDateString() hasta @promocion.FechaFin.ToShortDateString()</small></p>
                     </div>
                 </div>
@@ -37,7 +51,7 @@
                         <p>Precio: $@plato.Precio</p>
                         @if (plato.Promocion != null)
                         {
-                            <p class="text-success">Descuento: @(plato.Promocion.Descuento * 100)% OFF</p>
+                            <p class="text-success">Descuento: @(plato.Promocion.Descuento * 100)% </p>
                         }
                         <a href="@Url.Action("AgregarAlCarrito", "Carrito", new { platoId = plato.PlatoID })" class="btn">Agregar al Carrito</a>
                     </div>
@@ -57,7 +71,7 @@
                         <p>Precio: $@combo.Precio</p>
                         @if (combo.Promocion != null)
                         {
-                            <p class="text-success">Descuento: @(combo.Promocion.Descuento * 100)% OFF</p>
+                            <p class="text-success">Descuento: @(combo.Promocion.Descuento * 100)% </p>
                         }
                         <a href="@Url.Action("AgregarAlCarrito", "Carrito", new { comboId = combo.ComboID })" class="btn">Agregar al Carrito</a>
                     </div>

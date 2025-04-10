@@ -27,9 +27,13 @@ namespace PrototipoRestaurante3.Controllers
 
             if (cliente != null)
             {
+
+                
+                HttpContext.Session.SetInt32("ClienteID", cliente.ClienteID); // Aquí guardas el ID del cliente
+                HttpContext.Session.SetString("ClienteNombre", cliente.Nombre);
                 // Puedes guardar la sesión aquí si usas sesiones.
                 TempData["ClienteNombre"] = cliente.Nombre;
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Menu");
             }
             else
             {
@@ -58,5 +62,22 @@ namespace PrototipoRestaurante3.Controllers
 
             return View(cliente);
         }
+
+        // Método Logout para cerrar sesión
+        public IActionResult Logout()
+        {
+            Console.WriteLine("Logout iniciado");
+
+            // Limpiar las variables de sesión
+            HttpContext.Session.Clear();
+            TempData["Message"] = "Sesión cerrada con éxito";
+
+            Console.WriteLine("Redirigiendo a Login");
+
+            // Redirigir a la acción Login
+            return RedirectToAction("Index", "Home");
+        }
+
+
     }
 }

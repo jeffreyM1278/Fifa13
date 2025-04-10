@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+
+    <h2>Personaliza tu compra</h2>
+    <form asp-action="GuardarCambios" method="post">
+        @foreach (var detalle in Model.Detalles)
+        {
+            <div>
+                <label>@detalle.Plato.Nombre</label>
+                <input type="number" name="detallesActualizados[@detalle.DetalleCarritoID].Cantidad" value="@detalle.Cantidad" min="1" />
+            </div>
+        }
+        <button type="submit">Guardar Cambios</button>
+        <a href="@Url.Action("Index", "Carrito")">Cancelar Cambios</a>
+    </form>
+
+}
