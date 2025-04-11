@@ -10,8 +10,8 @@ namespace PrototipoRestaurante3.Models
         public int PromocionID { get; set; }
         public string Descripcion { get; set; }
         public decimal Descuento { get; set; }
-        public DateTime FechaInicio { get; set; }
-        public DateTime FechaFin { get; set; }
+        public DateTime FechaInicio { get; set; } = DateTime.Now;
+        public DateTime FechaFin { get; set; } = DateTime.Now.AddDays(30);
         [ValidateNever]
         public ICollection<Plato> Platos { get; set; }
         [ValidateNever]

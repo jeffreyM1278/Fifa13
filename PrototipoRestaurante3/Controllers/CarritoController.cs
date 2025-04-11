@@ -4,6 +4,8 @@ using PrototipoRestaurante3.Models;
 
 namespace PrototipoRestaurante3.Controllers
 {
+
+
     public class CarritoController : Controller
     {
         private readonly restauranteDbContext _context;
@@ -58,9 +60,11 @@ namespace PrototipoRestaurante3.Controllers
 
             if (carrito != null)
             {
+                // Asegúrate de que la cantidad se actualiza correctamente
                 foreach (var detalle in detallesActualizados)
                 {
-                    var detalleExistente = carrito.Detalles.FirstOrDefault(d => d.DetalleCarritoID == detalle.DetalleCarritoID);
+                    var detalleExistente = carrito.Detalles
+                        .FirstOrDefault(d => d.DetalleCarritoID == detalle.DetalleCarritoID);
                     if (detalleExistente != null)
                     {
                         detalleExistente.Cantidad = detalle.Cantidad;
@@ -93,4 +97,6 @@ namespace PrototipoRestaurante3.Controllers
             return View();
         }
     }
+
+
 }

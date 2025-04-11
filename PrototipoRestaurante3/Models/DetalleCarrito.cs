@@ -21,6 +21,6 @@ namespace PrototipoRestaurante3.Models
         public Combo Combo { get; set; }
 
         [NotMapped]
-        public decimal Subtotal => Cantidad * PrecioUnitario;
+        public decimal Subtotal { get; set; }
     }
 }

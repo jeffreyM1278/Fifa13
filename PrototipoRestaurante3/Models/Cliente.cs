@@ -13,7 +13,7 @@ namespace PrototipoRestaurante3.Models
         public string Email { get; set; }
         public string Telefono { get; set; }
         public string Direccion { get; set; }
-        public DateTime FechaRegistro { get; set; }
+        public DateTime FechaRegistro { get; set; } = DateTime.Now;
         public string Contrasena { get; set; }
         [ValidateNever]
         public ICollection<PedidoOnline> PedidosOnline { get; set; }

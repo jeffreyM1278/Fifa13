@@ -8,7 +8,7 @@ namespace PrototipoRestaurante3.Models
         [Key]
         public int CarritoID { get; set; }
         public int ClienteID { get; set; }
-        public DateTime FechaCreacion { get; set; }
+        public DateTime FechaCreacion { get; set; } = DateTime.Now;
         public string Estado { get; set; } // Activo, Pendiente, Finalizado
         [ValidateNever]
         public Cliente Cliente { get; set; }

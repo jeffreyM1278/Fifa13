@@ -10,7 +10,7 @@ namespace PrototipoRestaurante3.Models
         public int PedidoID { get; set; }
         public int ClienteID { get; set; }
         public int TipoPagoID { get; set; }
-        public DateTime FechaPedido { get; set; }
+        public DateTime FechaPedido { get; set; } = DateTime.Now;
         public decimal Total { get; set; }
         public string Estado { get; set; }
         [ValidateNever]

@@ -11,7 +11,7 @@ namespace PrototipoRestaurante3.Models
         public int ClienteID { get; set; }
         public int PlatoID { get; set; }
         public int Cantidad { get; set; }
-        public DateTime FechaCompra { get; set; }
+        public DateTime FechaCompra { get; set; } = DateTime.Now;
         [ValidateNever]
         public Cliente Cliente { get; set; }
         [ValidateNever]

@@ -39,7 +39,6 @@
             }
         </div>
 
-        <!-- Menú Completo -->
         <h2>🍽️ Menú Completo</h2>
         <div class="grid">
             @foreach (var plato in Model.Platos)
@@ -53,13 +52,13 @@
                         {
                             <p class="text-success">Descuento: @(plato.Promocion.Descuento * 100)% </p>
                         }
-                        <a href="@Url.Action("AgregarAlCarrito", "Carrito", new { platoId = plato.PlatoID })" class="btn">Agregar al Carrito</a>
+                        <!-- Agregar al carrito -->
+                        <a href="@Url.Action("AgregarAlCarrito", "Menu", new { platoId = plato.PlatoID })" class="btn">Agregar al Carrito</a>
                     </div>
                 </div>
             }
         </div>
 
-        <!-- Combos -->
         <h2>🥡 Combos</h2>
         <div class="grid">
             @foreach (var combo in Model.Combos)
@@ -73,11 +72,16 @@
                         {
                             <p class="text-success">Descuento: @(combo.Promocion.Descuento * 100)% </p>
                         }
-                        <a href="@Url.Action("AgregarAlCarrito", "Carrito", new { comboId = combo.ComboID })" class="btn">Agregar al Carrito</a>
+                        <!-- Agregar al carrito -->
+                        <a href="@Url.Action("AgregarAlCarrito", "Menu", new { comboId = combo.ComboID })" class="btn">Agregar al Carrito</a>
                     </div>
                 </div>
             }
         </div>
+
+
+
+
 
     </div>
 
